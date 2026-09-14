@@ -56,7 +56,7 @@ something to log.
 - **Experience gap cap**: if the role requires more *industry* years than Clementine has (see
   Experience reality check above), deduct 1 point per year (e.g., 8+ years 
   industry experience = -8 points).
-- **Missing required skill/platform**: −5 to −15 per required hard skill or platform she
+- **Missing required skill/platform**: −5 per required hard skill or platform she
   doesn't have experience with (e.g., a specific enterprise SaaS tool, a specific ML framework
   she hasn't used). Don't penalize for tools that are clearly learnable on the job or that
   overlap closely with something she knows (e.g., don't penalize "Figma" if she knows Adobe
