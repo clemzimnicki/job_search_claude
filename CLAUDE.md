@@ -45,19 +45,23 @@ Score every role 0–100.
 **Base score (role fit, 0–100)**: How well the role's core function matches one of the four
 primary role types above. A role that is centrally a UX research, data viz, human factors, or
 applied research scientist role starts high (70–90 depending on specificity of match). A role
-that is adjacent (e.g., general data scientist, product analyst, quant researcher) starts
-lower (40–60). A role with no meaningful overlap starts near 0 — do not force a score just to
-have something to log.
+that is adjacent (e.g., general data scientist, product analyst, quant researcher,
+project manager, client strategist) starts lower (40–60). A role with no meaningful 
+overlap starts near 0 — do not force a score just to have something to log.
 
 **Penalties applied** (subtract from base score, note each one applied):
 - **Experience gap cap**: if the role requires more *industry* years than Clementine has (see
-  Experience reality check above), cap the final score at 50 regardless of base score.
+  Experience reality check above), deduct 1 point per year (e.g., 8+ years 
+  industry experience = -8 points).
 - **Missing required skill/platform**: −5 to −15 per required hard skill or platform she
   doesn't have experience with (e.g., a specific enterprise SaaS tool, a specific ML framework
   she hasn't used). Don't penalize for tools that are clearly learnable on the job or that
   overlap closely with something she knows (e.g., don't penalize "Figma" if she knows Adobe
   CC and design tools broadly).
-- **Compensation below target**: −20 if the stated range is entirely at or below $90k. −10 if
+- **Missing required degree**: -0 to -15 points depending on how far the degree 
+  is from what Clementine's degrees are. E.g., sociology is -0; but Mechanical 
+  Engineering is -15.
+- **Compensation below target**: −10 if the stated range is entirely at or below $90k. −5 if
   the range straddles $90k (e.g., $80k–$100k).
 - **AI-forward bonus**: +5 if the role explicitly involves LLM/AI-assisted workflows, prompt
   engineering, or AI tool evaluation — Clementine has hands-on experience using Claude Code
@@ -134,13 +138,14 @@ irrelevant snippets before fetching, then fetch each surviving candidate once.
 **When applying to a role**: save the job description into a per-company folder under
 `resumes/<Company>/`, tailor a copy of `profile/og-resume.md` for that specific role (never
 edit `profile/og-resume.md` itself), and export a PDF with the naming convention
-`Zimnicki_<Company>_<Role>.pdf`. All application materials require Clementine's manual review
-before anything is submitted. Only Clementine marks a row "Applied" in the CSV — do not set
-that field yourself even after generating materials.
+`Zimnicki_<Company>_<Role>.pdf`. Do not apply anywhere, Clementine will do that. 
+Only Clementine marks a row "Applied" in the CSV — do not set that field yourself 
+even after generating materials.
 
 **Outreach**: log every networking contact in `data/outreach_tracker.csv`, including the exact
 message sent (not a paraphrase) and a follow-up date, so past conversations aren't
-accidentally repeated or contradicted.
+accidentally repeated or contradicted. Do not reach out to anyone, Clementine will
+do that. 
 
 ## Guardrails
 
@@ -160,3 +165,5 @@ When drafting outreach messages, resume bullets, or digest summaries:
 - Avoid labeled-list patterns like "Trigger: X" / "Result: Y".
 - Avoid rigid three-example formatting — vary sentence structure and list length instead.
 - Keep outreach messages specific to the person and role, not templated boilerplate.
+
+Do not send outreach messages, ever. Clementine will do that. 
