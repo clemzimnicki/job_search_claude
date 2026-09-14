@@ -86,12 +86,18 @@ def fetch_workday(entry):
     jobs = []
     offset = 0
     limit = 20
+    total = None
     while True:
         body = {"appliedFacets": {}, "limit": limit, "offset": offset, "searchText": ""}
         data = _get_json(base, method="POST", body=body)
         postings = data.get("jobPostings", [])
         if not postings:
             break
+        # Some Workday tenants only report the correct "total" on the first page and
+        # return 0 on subsequent pages -- latch onto the first non-zero total we see
+        # rather than re-reading it (and stopping early) every iteration.
+        if total is None:
+            total = data.get("total", 0)
         for job in postings:
             path = job.get("externalPath", "")
             jobs.append({
@@ -103,7 +109,7 @@ def fetch_workday(entry):
                 "location": job.get("locationsText"),
             })
         offset += limit
-        if offset >= data.get("total", 0):
+        if offset >= total or len(postings) < limit:
             break
     return jobs
 

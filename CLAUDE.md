@@ -28,11 +28,13 @@ excluded (see Hard Exclusions).
 $90k are penalized heavily (see Scoring Rubric); do not exclude outright unless the range is
 clearly and entirely below $90k with no ambiguity.
 
-**Experience reality check**: Clementine has 5+ years of *academic/research* experience but
-zero years of *industry* experience — she is an entry-level industry candidate with a PhD, not
-a senior IC. Postings that say "PhD" or "PhD + 0-2 years" (postdoc or industry) are a natural
-fit. Postings that require 3+ years of *industry* experience beyond the PhD should be treated
-as a real gap, not dismissed just because she has "5 years of experience" academically.
+**Experience reality check**: Clementine has 6+ years of *academic/research* experience,
+and 2+ years of experience at Sandia National Labs. She is an entry-level industry 
+candidate with a PhD, not a senior IC. Postings that say "PhD" or "PhD + 0-3 years" 
+(postdoc or industry) are a natural fit. Postings that require 5+ years of 
+*industry* experience beyond the PhD should be treated as a minor gap; Sandia
+National Labs is adjacent to industry and academia in that it is a government 
+position. Don't disqualify a role if it is otherwise a very good fit. 
 
 **Hard exclusions** (score 0, log with Notes: EXCLUDED, do not include in the daily digest):
 - Academic/postdoc positions, faculty/lecturer roles, adjunct positions
@@ -43,11 +45,12 @@ as a real gap, not dismissed just because she has "5 years of experience" academ
 Score every role 0–100.
 
 **Base score (role fit, 0–100)**: How well the role's core function matches one of the four
-primary role types above. A role that is centrally a UX research, data viz, human factors, or
-applied research scientist role starts high (70–90 depending on specificity of match). A role
-that is adjacent (e.g., general data scientist, product analyst, quant researcher,
-project manager, client strategist) starts lower (40–60). A role with no meaningful 
-overlap starts near 0 — do not force a score just to have something to log.
+primary role types above. A role that is centrally a UX research, data viz, human factors, 
+research operations, or applied research scientist role starts high (70–90 depending on 
+specificity of match). A role that is adjacent (e.g., general data scientist, product 
+analyst, quant researcher, project manager, client strategist) starts lower (40–60). 
+A role with no meaningful overlap starts near 0 — do not force a score just to have 
+something to log.
 
 **Penalties applied** (subtract from base score, note each one applied):
 - **Experience gap cap**: if the role requires more *industry* years than Clementine has (see
@@ -63,9 +66,9 @@ overlap starts near 0 — do not force a score just to have something to log.
   Engineering is -15.
 - **Compensation below target**: −10 if the stated range is entirely at or below $90k. −5 if
   the range straddles $90k (e.g., $80k–$100k).
-- **AI-forward bonus**: +5 if the role explicitly involves LLM/AI-assisted workflows, prompt
-  engineering, or AI tool evaluation — Clementine has hands-on experience using Claude Code
-  for experiment programming and data analysis.
+- **AI-forward bonus**: +5 if the role explicitly involves LLM/AI-assisted workflows.
+  Clementine has hands-on experience using Claude Code for experiment programming 
+  and data analysis, but hasn't developed or engineered AI. 
 
 **Thresholds**:
 - 80+: strong fit, near-natural hire — surface prominently in the digest.
