@@ -1,0 +1,28 @@
+[
+  {
+    "company": "FSH Technologies",
+    "platform": "ashby",
+    "slug": "FSH",
+    "notes": "Confirmed via jobs.ashbyhq.com/FSH."
+  },
+  {
+    "company": "Adobe",
+    "platform": "workday",
+    "tenant": "adobe",
+    "wd_host": "wd5",
+    "site": "external_experienced",
+    "notes": "Confirmed via adobe.wd5.myworkdayjobs.com/external_experienced."
+  },
+  {
+    "company": "Exponent",
+    "platform": "icims",
+    "slug": null,
+    "notes": "Careers hosted at careers-exponent.icims.com. ICIMS has no simple public JSON API like Greenhouse/Lever/Ashby/Workday, so check_boards.py does not query it automatically. Check via targeted web search or by browsing the ICIMS board directly."
+  },
+  {
+    "company": "Perceptual Insights Inc",
+    "platform": "unknown",
+    "slug": null,
+    "notes": "Could not confirm a real company by this exact name or find a public job board during initial research (search surfaced unrelated companies: Perceptive, Perceptive Analytics, Perception Insights). Verify the company exists and find its actual careers page before relying on this entry."
+  }
+]

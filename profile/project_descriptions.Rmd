@@ -1,0 +1,271 @@
+---
+title: "projects"
+output: html_document
+date: "2026-09-12"
+---
+
+#List of projects I have done 
+
+## University of Illinois at Urbana-Champaign
+### Role: Undergraduate research assistant
+
+#### Project 1 (2019-2020)
+- Led an online behavioral study
+- PI was Diane Beck; collaborator Emily Cunningham
+- Contributions: read relevant literature, stimulus design (Python), 
+helped program experiment using PsychoPy, helped analyze data (R), created
+visualizations (R/ggplot), wrote senior thesis, created poster for Psychonomics
+annual meeting 2020 (PowerPoint)
+- Outcome: poster presented at Psychonomics annual meeting 2020, written document 
+submitted as senior thesis; this work was the basis for a second-author paper (below) 
+DOI: https://doi.org/10.1523/JNEUROSCI.0238-23.2023 
+Abstract:
+Alpha rhythmic activity is often suggested to exert an inhibitory influence on information processing. However, relatively little is known about how reported alpha-related effects are influenced by a potential confounding element of the neural signal, power-law scaling. In the current study, we systematically examine the effect of accounting for 1/f activity on the relation between prestimulus alpha power and human behavior during both auditory and visual detection (N = 27; 19 female, 6 male, 2 nonbinary). The results suggest that, at least in the scalp-recorded EEG signal, the difference in alpha power often reported before visual hits versus misses is probably best thought of as a combination of narrowband alpha and broadband shifts. That is, changes in broadband parameters (exponent and offset of 1/f-like activity) also appear to be strong predictors of the subsequent awareness of visual stimuli. Neither changes in posterior alpha power nor changes in 1/f-like activity reliably predicted detection of auditory stimuli. These results appear consistent with suggestions that broadband changes in the scalp-recorded EEG signal may account for a portion of prior results linking alpha band dynamics to visuospatial attention and behavior, and suggest that systematic re-examination of existing data may be warranted.
+
+##University of Wisconsin-Madison
+### Role: PhD student (2020-2025), now PhD candidate (Graduating December 2026)
+
+#### Project 2 (2020-2022): 
+
+- Led an online behavioral study
+- PI was Karen Schloss
+- Contributions: read relevant literature, stimulus design (Adobe Photoshop), 
+programmed experiment using JsPsych/Javascript, analyzed data (R), created
+visualizations (R/ggplot), wrote abstract, created poster for Vision Sciences 
+Society (Adobe Illustrator)
+- Outcome: abstract published in Vision Sciences Society proceedings, poster
+presented at Vision Sciences Society 2022, document submitted as first-year PhD project
+in 2021 (which was requirement for getting an M.A.)
+- DOI: https://doi.org/10.1167/jov.22.14.4338
+
+Abstract:
+Individuals have expectations about how visual features map to concepts in information visualizations. These expectations are called inferred mappings. Interpreting visualizations becomes easier when inferred mappings match the encoded mapping in the legend. Studies on information visualization has found that inferred mappings for colormaps are impacted by the dark-is-more bias, which causes adults to map darker colors to larger quantities (Cuff, 1973; McGranaghan, 1989; Schloss et al., 2019). However, Smith and Sera (1992) suggested this bias is absent in adults for solid squares. We aimed to reconcile these contradicting results by investigating how configuration (square vs. grids in maps) impact inferred mappings. We asked participants to indicate which of two achromatic squares (dark/light) was “more” (methods adapted from Smith and Sera (1992)) and which side of an 8×8 colormap (dark/light) represented more fictitious alien animal sightings (methods adapted from Schloss et al., 2019). We expected participants to show a dark-is-more bias when making inferences about colormaps, but not when making inferences about solid squares. However, participants showed a dark-is-more bias for both tasks (p<.001), and responses did not significantly differ by task (p=.64). Thus, there were no differences between squares and maps to reconcile. To investigate factors that may influence the strength of the dark-is-more bias on inferred mappings in adults, we next tested for effect of background lightness. A new set of participants were presented with the same stimuli on a black background. They were significantly less likely to respond that the darker region mapped to “more” on the black background (p<.001), which is consistent with an “opaque-is-more” bias overriding the dark-is-more bias. This reduction was significantly larger for solid squares than for colormaps (p<.001). The reasons for this interaction are unknown, but the results suggest that multiple configural factors combine to influence inferred mappings between lightness and quantities.
+
+
+#### Project 3 (2021-2023): 
+
+- Led an online behavioral study
+- PI was Karen Schloss; collaborator Danielle Szafir
+- Contributions: read relevant literature, stimulus design (Adobe Photoshop), 
+programmed experiment using JsPsych/Javascript, analyzed data (R), created
+visualizations (R/ggplot), wrote abstract, created poster for Vision Sciences 
+Society (Adobe Illustrator)
+- Outcome: abstract published in Vision Sciences Society proceedings, poster
+presented at Vision Sciences Society 2023
+- DOI: https://doi.org/10.1167/jov.23.9.5742
+
+Abstract: 
+Spatial vision primarily depends on luminance contrast, but hue variation in spatial patterns (e.g., sinewave gratings) interferes with luminance contrast sensitivity (De Valois & Switkes, 1983). We investigated whether this hue masking effect contributes to people’s interpretations of colors in colormap data visualizations (e.g., weather maps, neuroimaging brain maps). Previous work has shown that interpretations of colormap data visualizations are influenced by the dark-is-more bias: the tendency for people to infer that darker regions map to larger quantities. We investigated whether the magnitude of lightness difference needed to activate the dark-is-more bias depended on hue variation. Participants were presented with colormap data visualizations (8x8 grids) that represented quantities of data measured in different counties. One side of the map was lighter and the other side was darker (left/right balanced over trials). Participants indicated on which side of each colormap (left/right) the measured numbers were larger. The colors in the colormaps either varied only in lightness or varied in both lightness and hue (between-subjects). Overall, participants inferred that darker colors mapped to larger quantities (dark-is-more bias). However, when lightness difference was small (delta L*=5), participants were more likely to make dark-more judgments for colormaps that only varied in lightness, compared to colormaps that varied in lightness and hue. These judgments correlated with darkness difference ratings, in which different participants judged how obvious it was that one of two endpoint colors from the colormap stimuli was darker than the other endpoint (r=.79, p<.05). Our results extend the findings of De Valois & Switkes (1983) to the domain of information visualization—hue variation masked the percept of lightness variation, which in turn weakened activation of the dark-is-more bias. Thus, we must account for hue, not just lightness variation, to understand the effect of the dark-is-more bias on interpretations of colormap data visualizations.
+
+#### Project 4 (2022-2023): 
+- Led an online behavioral study
+- PI was Karen Schloss; collaborator Danielle Szafir
+- Contributions: read relevant literature, stimulus design (MATLAB), 
+programmed experiment using JsPsych/Javascript, analyzed data (R), created
+visualizations (R/ggplot), co-wrote paper with Karen Schloss 
+- Outcome: paper published in IEEE VIS proceedings 2023, talk presented to 
+audience of engineers/psychologists/computer scientists/etc at IEEE VIS 2023 
+annual meeting
+- doi: 10.1109/VIS54172.2023.00011
+
+Abstract:
+To create effective data visualizations, it helps to represent data using visual features in intuitive ways. When visualization designs match observer expectations, visualizations are easier to interpret. Prior work suggests that several factors influence such expectations. For example, the dark-is-more bias leads observers to infer that darker colors map to larger quantities, and the opaque-is-more bias leads them to infer that regions appearing more opaque (given the background color) map to larger quantities. Previous work suggested that the background color only plays a role if visualizations appear to vary in opacity. The present study challenges this claim. We hypothesized that the background color would modulate inferred mappings for colormaps that should not appear to vary in opacity (by previous measures) if the visualization appeared to have a “hole” that revealed the background behind the map (hole hypothesis). We found that spatial aspects of the map contributed to inferred mappings, though the effects were inconsistent with the hole hypothesis. Our work raises new questions about how spatial distributions of data influence color semantics in colormap data visualizations.
+
+#### Project 5 (2024-2025)
+
+- Led a combined online/in-person behavioral study (Prolific/UW-Madison SONA)
+- PI was Timothy T. Rogers
+- Contributions: read relevant literature, stimulus design (Adobe Photoshop), 
+programmed experiment using JsPsych/Javascript, analyzed data (R), created
+visualizations (R/ggplot), wrote abstract, created poster for Vision Sciences 
+Society (Adobe Illustrator)
+- Outcome: abstract published in Cognitive Sciences Society proceedings, poster
+presented at Cognitive Sciences Society 2025 annual meeting
+
+Abstract: 
+While individual differences have been found in many aspects of color perception, it is unclear whether mental representations of color vary between individuals in a structured way. To test for structured variability, we collected perceptual similarity judgments for 58 colors in a triadic-comparisons procedure, and from each participant's judgments, embedded the colors into a personalized three-dimensional space. The personalized embedding predicted a participant's similarity judgments on held-out items significantly better than did (a) embeddings from other participants, suggesting reliable individual differences in perceived color similarity (p < 0.0001), and (b) color coordinates in a standardized perceptual color space (CIELAB; p < 0.0005). Across individuals, embedding structure did not vary randomly but fell into two clusters, one encompassing more distinct color categories and the other a more continuous perceptual space. The results suggest the existence of previously unrecognized "motifs" in how people represent colors.
+
+
+#### Project 6 (2025-2026)
+- Led 3 online behavioral studies (Prolific + UW-Madison SONA)
+- PI was Timothy T. Rogers
+- Contributions: read relevant literature, stimulus design (Adobe Photoshop), 
+programmed experiment using JsPsych/Javascript, analyzed data (R), created
+visualizations (R/ggplot), wrote results in dissertation proposal, currently
+writing results in dissertation proper
+- Outcome: abstract published in Cognitive Sciences Society proceedings, will
+be part of dissertation work
+
+Study description: 
+Prior results from triadic comparisons of colors show individual differences in 
+the way that people judge color similarity, and further, that people cluster based
+on how they judge similarity (i.e., how they represent colors). Does this extend 
+to other domains of vision? 
+
+In this study, I applied the triadic comparisons/triplet judgment task to 
+2D line orientations (operationalized as Gabor patches oriented in different directions).
+Participants completed two identical sessions of this experiment, spaced 24 hours
+apart. This was done to ensure that participant judgments were consistent from 
+one day to the next. 
+
+Experiment 1:
+Stimuli were Gaussian Gabor patches oriented 0-175 degrees from vertical, differing 
+by 5, for a total of 36 different Gabor patches. They were presented on a 
+medium-gray background (RGB [89, 89, 89]). I found that people did not cluster, 
+but there were individual differences. Everyone judged similarity roughly according 
+to orientation.
+
+Experiment 2: 
+Stimuli were oriented 0-170 degrees from vertical, differing by 10; and appeared
+in either low-contrast or high-contrast versions of Gabor patches, for a total 
+of 36 different Gabor patches. They were presented on a medium-gray background 
+(RGB [89, 89, 89]). I found that people did not cluster, but there were individual 
+differences. Everyone judged similarity roughly according to contrast, ignoring
+orientation.
+
+Experiment 3: Stimuli were the same as in Experiment 2 (Gabor patches oriented 
+0-170 degrees from vertical, differing by 10, and appearing in either low-contrast 
+or high-contrast versions). People were instructed to make similarity judgments 
+according to orientation in Part 1, and got no special instructions in Part 2.
+I found that people clustered, and there were individual differences. In Part 1,
+most people judged similarity roughly according to orientation or according to 
+contrast. In Part 2, people only used contrast.
+
+#### Project 7 (2025-2026)
+- Led an online behavioral study (UW-Madison SONA)
+- PI was Timothy T. Rogers
+- Contributions: read relevant literature, stimulus design (Adobe Photoshop), 
+programmed experiment using JsPsych/Javascript, analyzed data (R), created
+visualizations (R/ggplot), wrote results in dissertation proposal, currently
+writing results in dissertation proper
+- Outcome: will be part of dissertation work
+
+Study description: 
+Prior results from triadic comparisons of colors show individual differences in 
+the way that people judge color similarity, and further, that people cluster based
+on how they judge similarity (i.e., how they represent colors). Does this extend 
+to other domains of vision? 
+
+In this study, I applied the triadic comparisons/triplet judgment task to
+2D moving stimuli (groups of dots/RDKs), which were based on work by 
+Emery et al., 2023.
+
+Results: people did not cluster, but there were individual differences. 
+
+#### Project 8 (2026): Do individual differences in perceived color similarity 
+####reflect category generalization?
+- Currently leading an in-person behavioral study (UW-Madison SONA)
+- PI is Timothy T. Rogers
+- Contributions: read relevant literature, stimulus design (MATLAB), 
+programmed experiment using JsPsych/Javascript (supported by ClaudeCode), 
+calibrated monitors using photoradiometer, analyzing data (R), creating 
+visualizations (R/ggplot), writing results in dissertation
+- Outcome: will be part of dissertation work
+
+Study description: 
+Prior results from triadic comparisons of colors show individual differences in 
+the way that people judge color similarity, and further, that people cluster based
+on how they judge similarity (i.e., how they represent colors). 
+
+In this study, I am testing whether the individual color spaces revealed by triadic
+comparisons predict how learning color categories generalizes across color space, 
+by pairing the triadic comparisons task with a categorization generalization task.
+I expect that people's judgments on the triadic comparisons task (and their resulting
+embeddings) may predict their judgments on the categorization generalization task.
+
+Methods: on each trial, a participant sees a square color. Their job is to use 
+the arrow keys to categorize it, left or right. There are 7 blocks of trials like 
+this, each using a different set of colors. In the first half of each block, 
+participants see half the colors in the block (one at a time) and receive feedback. 
+In the second half, they see the other half of the colors with no feedback. 
+
+Results: I will analyze results for the triadic comparisons in the same way that
+I analyzed the previous triadic comparisons results. I expect that personalized 
+embeddings will predict a participant's similarity judgments on held-out items 
+significantly better than will (a) embeddings from other participants, suggesting
+reliable individual differences in perceived color similarity, and (b) color 
+coordinates in a standardized perceptual color space (CIELAB). I expect also to
+find clusters. Finally, I expect that the embeddings will predict the category
+judgments, such that colors closer together in a person's embedding will be
+put into the same category in the category task. 
+
+#### Project 9 (2026): Are individual differences in perceived color similarity 
+####a result of strategy or ability?
+- Currently leading an in-person behavioral study (UW-Madison SONA)
+- PI is Timothy T. Rogers
+- Contributions: read relevant literature, stimulus design (MATLAB), 
+programmed experiment using JsPsych/Javascript (supported by ClaudeCode), 
+calibrated monitors using photoradiometer, analyzing data (R), creating 
+visualizations (R/ggplot), writing results in dissertation
+- Outcome: will be part of dissertation work
+
+Description:
+Prior results from triadic comparisons of colors show individual differences in 
+the way that people judge color similarity, and further, that people cluster based
+on how they judge similarity (i.e., how they represent colors). 
+
+In this study, I am testing whether participant similarity judgments are a result 
+of strategy (and can be changed at will) or whether judgments are a result of ability.
+
+Method: 
+I'm testing this by comparing participant patterns of responses on the triplet 
+task with their performance on a Garner interference task (based on 
+Melara et al., 1993). The Garner task tests whether two dimensions are integral 
+or separable by testing whether interference from one dimension affects 
+classification of the other. On each trial, participants will see a color and 
+will have to categorize it according to hue or lightness (depending on instructions) 
+using the left and right arrow keys. Faster, more accurate responses indicate 
+an ability to ignore variation on the irrelevant dimension. 
+
+Results: I will analyze results for the triadic comparisons in the same way that
+I analyzed the previous triadic comparisons results. I expect that personalized 
+embeddings will predict a participant's similarity judgments on held-out items 
+significantly better than will (a) embeddings from other participants, suggesting
+reliable individual differences in perceived color similarity, and (b) color 
+coordinates in a standardized perceptual color space (CIELAB). I expect also to
+find clusters. If respresentational motifs represent ability, then participants 
+in the hue cluster should be faster at classifying colors based on hue while 
+ignoring irrelevant lightness variation, and participants in the lightness cluster 
+should be faster at classifying colors based on lightness while ignoring irrelevant 
+hue variation. If representationalmotifs reflect strategy, however, then all 
+participants should be similarly affected by interference.
+
+## Sandia National Laboratories (ongoing position)
+### Role: R&D Intern
+
+#### Project 10 (2024-2026)
+- Led an online behavioral study (MTurk)
+- PI was Laura Matzen
+- Contributions: read relevant literature, stimulus design (Python, MATLAB)
+analyzed data (R), created visualizations (R/ggplot), co-wrote paper
+- Outcome: paper published in IEEE VIS
+- DOI: 10.1109/TVCG.2026.3713087
+
+Abstract:
+People struggle to reason about uncertainty, yet they must make decisions based on uncertain information in daily life as well as in high-stakes situations. One method of dealing with uncertainty is through data visualizations, which can help to summarize complex data. Though the importance of visualization design has been established, there remain questions about how certain aspects of design—for example, hue and lightness—affect interpretations, especially when uncertainty is present. We investigated the effects of hue and lightness variation on participants’ decision-making when viewing hazard maps that depicted wildfire risk. In three experiments, participants were shown a series of hypothetical wildfire risk maps that varied in lightness or in hue, and were asked to decide whether to evacuate based on these maps. We found that lightness variation within and between maps affected decision-making such that people chose to evacuate at higher rates when maps varied in lightness and when they were darker overall (Experiment 1). The hue of maps varied, and people chose to evacuate more often when lightness-varying maps were red than when they were blue (Experiment 2). When we removed borders around the risk bands within the maps, evacuation rates increased for darker maps and decreased for lighter maps (Experiment 3). Taken together, our results reinforce the notion that visualization design can affect not only interpretations of risks, but also the decisions that result from those interpretations.
+
+#### Project 11 (2025-2026)
+- Helping run a series of online interview-based projects at Sandia 
+- Mentor/supervisor is in human systems; 2 collaborators from engineering depts.
+- Contributions: co-design intake surveys, co-design interview questions, co-run
+interviews, manage all interview scheduling, lead data analyses (Excel/LLM-assisted), 
+track deliverables/teammate tasks, manage file organization, lead PowerPoint
+presentation design, co-present results to engineering depts with supervisor
+
+Description: 
+Was asked to help design interviews and surveys for a project aiming to better
+understand how two engineering teams at Sandia communicate/work together, with
+the goal of finding out where workflows break down, where communication is poor,
+and what general pain points are, as well as recommending solutions.
+
+#### Project 12-13 (2025; 2026)
+- 2025: Helped run & analyze a survey to assess an apprenticeship program
+- 2026: Led the effort to run and analyze the survey for 2026 cycle
+
+Description: 
+Was asked to help design survey and analyze results for a project aiming to 
+assess feedback from participants in an apprenticeship program, with the goal
+of understanding what issues there were (e.g., whether signing up for classes 
+was easy, whether mentors/team leads were communicative and organized, etc).
+Created survey, analyzed results (R/LLM-assisted), and created a PowerPoint 
+that was presented by the director of the program. 
