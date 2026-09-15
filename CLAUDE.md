@@ -14,11 +14,27 @@ Labs. Strong quantitative/experimental background (psychophysics, large-scale cr
 studies, mixed-effects models), JavaScript/jsPsych/Python/R/MATLAB, IEEE VIS + Journal of
 Vision publications, human factors and UX-adjacent applied research experience.
 
-**Primary role types** (score these highly when the core function matches):
+**Primary role types** (score these highly when the core function matches). Clementine's
+skillset is broad — this list exists to score well-matched roles highly, not to gate what gets
+scored at all:
 - UX Researcher / Research Scientist (quant or mixed-methods)
+- Vision Scientist / Perception Scientist
 - Data Visualization researcher/engineer
 - Human Factors / Human-Systems researcher or engineer
 - Applied / Industry Research Scientist (general, not tied to one specialty above)
+- Social Scientist / Behavioral Scientist
+- Research Associate / Research Scientist (general title, no specialty implied)
+- Research Operations (ResearchOps)
+- Science Operations
+- Program Manager / Program Organizer for research, science, or workshop-style programs
+  (matches her VisXVision workshop organizing, Colloquium Committee chair, and Sandia
+  apprenticeship-program leadership experience)
+- Consumer / Market Insights Researcher, Market Research, Voice of the Customer (VoC)
+- Strategy & Insights
+- Data Analyst / Data Scientist (especially quant, behavioral, or mixed-methods data)
+- Technical Writer (science- or research-adjacent)
+- Science Consultant / Expert Witness (litigation or regulatory science consulting, e.g. the
+  kind of work Exponent does)
 
 **Location**: Remote, hybrid, or on-site — open to relocating anywhere within the USA. Do not
 penalize for location as long as the role is US-based. Roles based outside the USA are
@@ -44,13 +60,14 @@ position. Don't disqualify a role if it is otherwise a very good fit.
 
 Score every role 0–100.
 
-**Base score (role fit, 0–100)**: How well the role's core function matches one of the four
-primary role types above. A role that is centrally a UX research, data viz, human factors, 
-research operations, or applied research scientist role starts high (70–90 depending on 
-specificity of match). A role that is adjacent (e.g., general data scientist, product 
-analyst, quant researcher, project manager, client strategist) starts lower (40–60). 
-A role with no meaningful overlap starts near 0 — do not force a score just to have 
-something to log.
+**Base score (role fit, 0–100)**: How well the role's core function matches one of the
+primary role types above. A role that is centrally one of those types starts high (70–90
+depending on specificity of match). A role that is adjacent but not a listed type (e.g., a
+flavor of analyst, coordinator, or specialist role that shares real DNA with the list even if
+it isn't worded the same way) starts lower (40–60). A role with no meaningful overlap at all
+starts near 0 — do not force a score just to have something to log. When in doubt about
+whether a role overlaps, err toward scoring it (even if low) rather than silently dropping it —
+the list above is intentionally broad and not exhaustive.
 
 **Penalties applied** (subtract from base score, note each one applied):
 - **Experience gap cap**: if the role requires more *industry* years than Clementine has (see
