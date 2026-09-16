@@ -100,6 +100,11 @@ def fetch_workday(entry):
             total = data.get("total", 0)
         for job in postings:
             path = job.get("externalPath", "")
+            if not job.get("title") or not path:
+                # Occasionally a page returns a malformed/placeholder entry (seen when
+                # postings open or close between paginated requests) -- skip it rather
+                # than log an unusable row.
+                continue
             jobs.append({
                 "company": entry["company"],
                 "platform": "workday",
