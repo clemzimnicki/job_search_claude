@@ -24,5 +24,11 @@
     "platform": "unknown",
     "slug": null,
     "notes": "Could not confirm a real company by this exact name or find a public job board during initial research (search surfaced unrelated companies: Perceptive, Perceptive Analytics, Perception Insights). Verify the company exists and find its actual careers page before relying on this entry."
+  },
+  {
+    "company": "Sandia National Laboratories",
+    "platform": "custom",
+    "slug": null,
+    "notes": "Added 2026-09-18 at Clementine's request (she is a current Sandia intern, which makes her a stronger internal candidate). Careers hosted at sandia.jobs, a custom Nuxt.js-built site (script bundle at /_nuxt/, no Greenhouse/Lever/Ashby/Workday markers found in page source) with no discoverable public JSON API, so check_boards.py does not query it automatically. Check via targeted web search or by browsing sandia.jobs/jobs/ directly."
   }
 ]
