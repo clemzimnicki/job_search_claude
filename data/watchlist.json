@@ -29,6 +29,6 @@
     "company": "Sandia National Laboratories",
     "platform": "custom",
     "slug": null,
-    "notes": "Added 2026-09-18 at Clementine's request (she is a current Sandia intern, which makes her a stronger internal candidate). Careers hosted at sandia.jobs, a custom Nuxt.js-built site (script bundle at /_nuxt/, no Greenhouse/Lever/Ashby/Workday markers found in page source) with no discoverable public JSON API, so check_boards.py does not query it automatically. Check via targeted web search or by browsing sandia.jobs/jobs/ directly."
+    "notes": "Added 2026-09-18 at Clementine's request (she is a current Sandia intern, which makes her a stronger internal candidate). Careers hosted at sandia.jobs, a custom Nuxt.js-built site (script bundle at /_nuxt/, no Greenhouse/Lever/Ashby/Workday markers found in page source) with no discoverable public JSON API, so check_boards.py does not query it automatically. Check via targeted web search or by browsing sandia.jobs/jobs/ directly. IMPORTANT (added 2026-09-19 per Clementine): exclude Sandia internship postings from scoring -- she is already a year-round R&D intern there, so those are not new opportunities for her (see CLAUDE.md Hard Exclusions). Also, Sandia's 'Human Systems' department no longer exists as of a 2026 reorg; a posting referencing it by that name is likely a stale aggregator mirror."
   }
 ]

@@ -55,6 +55,13 @@ position. Don't disqualify a role if it is otherwise a very good fit.
 **Hard exclusions** (score 0, log with Notes: EXCLUDED, do not include in the daily digest):
 - Academic/postdoc positions, faculty/lecturer roles, adjunct positions
 - Roles based outside the USA
+- Sandia National Laboratories internship postings — Clementine is already a year-round R&D
+  intern there, so a new internship req at Sandia is not a new opportunity for her. (Full-time,
+  non-internship Sandia postings are not excluded and should still be scored normally.)
+  Note also: Sandia's "Human Systems" department no longer exists as of a 2026 reorg (Clementine
+  used to be in it; it was renamed). A posting referencing "Human Systems" by that name is very
+  likely a stale aggregator mirror of an outdated req — treat it skeptically even before the
+  internship exclusion above would otherwise apply.
 
 ## Scoring Rubric
 
