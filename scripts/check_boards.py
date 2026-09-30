@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Query every ATS-supported company in data/watchlist.json in one batch and print job
-postings as JSON. Supports Greenhouse, Lever, Ashby, and Workday. Entries on other platforms
+postings as JSON. Supports Greenhouse, Lever, Ashby, Workday, Oracle Cloud HCM, and
+Eightfold (keyword search only -- see fetch_eightfold). Entries on other platforms
 (e.g. "icims", "unknown") are skipped and reported separately so they can be checked manually
 or via web search instead.
 
@@ -9,9 +10,11 @@ Usage:
 """
 
 import argparse
+import datetime
 import json
 import sys
 import urllib.error
+import urllib.parse
 import urllib.request
 
 DEFAULT_WATCHLIST = "data/watchlist.json"
@@ -30,6 +33,12 @@ def _get_json(url, method="GET", body=None):
         return json.loads(resp.read().decode("utf-8"))
 
 
+def _date_from_ts(ts, ms=False):
+    if not ts:
+        return ""
+    return datetime.date.fromtimestamp(ts / 1000 if ms else ts).isoformat()
+
+
 def fetch_greenhouse(entry):
     url = f"https://boards-api.greenhouse.io/v1/boards/{entry['slug']}/jobs?content=true"
     data = _get_json(url)
@@ -42,6 +51,7 @@ def fetch_greenhouse(entry):
             "url": job.get("absolute_url"),
             "job_id": str(job.get("id")),
             "location": (job.get("location") or {}).get("name"),
+            "posted": (job.get("first_published") or job.get("updated_at") or "")[:10],
         })
     return jobs
 
@@ -58,6 +68,7 @@ def fetch_lever(entry):
             "url": job.get("hostedUrl"),
             "job_id": job.get("id"),
             "location": (job.get("categories") or {}).get("location"),
+            "posted": _date_from_ts(job.get("createdAt"), ms=True),
         })
     return jobs
 
@@ -74,6 +85,7 @@ def fetch_ashby(entry):
             "url": job.get("jobUrl") or job.get("applyUrl"),
             "job_id": job.get("id"),
             "location": job.get("location"),
+            "posted": (job.get("publishedAt") or "")[:10],
         })
     return jobs
 
@@ -112,6 +124,7 @@ def fetch_workday(entry):
                 "url": f"https://{tenant}.{wd_host}.myworkdayjobs.com/{site}{path}",
                 "job_id": job.get("bulletFields", [None])[0] or path,
                 "location": job.get("locationsText"),
+                "posted": job.get("postedOn"),
             })
         offset += limit
         if offset >= total or len(postings) < limit:
@@ -119,11 +132,81 @@ def fetch_workday(entry):
     return jobs
 
 
+def fetch_oracle(entry):
+    """Oracle Cloud HCM candidate-experience sites (e.g. .../CandidateExperience/en/sites/<site>).
+    Needs "host" (the fa-*.oraclecloud.com host) and "site" (the site number) in the entry."""
+    host = entry["host"]
+    site = entry["site"]
+    base = f"https://{host}/hcmRestApi/resources/latest/recruitingCEJobRequisitions"
+    jobs = []
+    offset = 0
+    limit = 25
+    while True:
+        finder = f"findReqs;siteNumber={site},limit={limit},offset={offset},sortBy=POSTING_DATES_DESC"
+        url = f"{base}?onlyData=true&expand=requisitionList&finder={urllib.parse.quote(finder, safe=';=,')}"
+        data = _get_json(url)
+        item = (data.get("items") or [{}])[0]
+        reqs = item.get("requisitionList", [])
+        for job in reqs:
+            jobs.append({
+                "company": entry["company"],
+                "platform": "oracle",
+                "title": job.get("Title"),
+                "url": f"https://{host}/hcmUI/CandidateExperience/en/sites/{site}/job/{job.get('Id')}",
+                "job_id": str(job.get("Id")),
+                "location": job.get("PrimaryLocation"),
+                "country": job.get("PrimaryLocationCountry"),
+                "posted": job.get("PostedDate"),
+            })
+        offset += limit
+        if not reqs or offset >= item.get("TotalJobsCount", 0):
+            break
+    return jobs
+
+
+def fetch_eightfold(entry):
+    """Eightfold PCSX career sites (<tenant>.eightfold.ai/careers). Large employers post
+    thousands of reqs there, so rather than pull the whole board this runs each keyword in
+    entry["queries"] (newest first) and keeps postings from the last entry["max_age_days"]
+    days (default 30)."""
+    tenant = entry["tenant"]
+    domain = entry["domain"]
+    cutoff = datetime.datetime.now().timestamp() - entry.get("max_age_days", 30) * 86400
+    jobs = {}
+    for query in entry.get("queries", []):
+        start = 0
+        while True:
+            params = urllib.parse.urlencode({"domain": domain, "query": query, "start": start,
+                                             "sort_by": "timestamp"})
+            data = _get_json(f"https://{tenant}.eightfold.ai/api/pcsx/search?{params}")["data"]
+            positions = data.get("positions", [])
+            for job in positions:
+                if job.get("postedTs", 0) < cutoff:
+                    continue
+                jobs[job["id"]] = {
+                    "company": entry["company"],
+                    "platform": "eightfold",
+                    "title": job.get("name"),
+                    "url": f"https://{tenant}.eightfold.ai{job.get('positionUrl')}",
+                    "job_id": str(job.get("displayJobId") or job["id"]),
+                    "location": "; ".join(job.get("locations") or []),
+                    "posted": _date_from_ts(job.get("postedTs")),
+                    "pay_range": "; ".join(job.get("efcustomTextCustpayrange") or []),
+                }
+            start += len(positions)
+            if (not positions or start >= data.get("count", 0)
+                    or positions[-1].get("postedTs", 0) < cutoff):
+                break
+    return list(jobs.values())
+
+
 FETCHERS = {
     "greenhouse": fetch_greenhouse,
     "lever": fetch_lever,
     "ashby": fetch_ashby,
     "workday": fetch_workday,
+    "oracle": fetch_oracle,
+    "eightfold": fetch_eightfold,
 }
 
 

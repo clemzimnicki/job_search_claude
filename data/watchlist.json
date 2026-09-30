@@ -30,5 +30,47 @@
     "platform": "custom",
     "slug": null,
     "notes": "Added 2026-09-18 at Clementine's request (she is a current Sandia intern, which makes her a stronger internal candidate). Careers hosted at sandia.jobs, a custom Nuxt.js-built site (script bundle at /_nuxt/, no Greenhouse/Lever/Ashby/Workday markers found in page source) with no discoverable public JSON API, so check_boards.py does not query it automatically. Check via targeted web search or by browsing sandia.jobs/jobs/ directly. IMPORTANT (added 2026-09-19 per Clementine): exclude Sandia internship postings from scoring -- she is already a year-round R&D intern there, so those are not new opportunities for her (see CLAUDE.md Hard Exclusions). Also, Sandia's 'Human Systems' department no longer exists as of a 2026 reorg; a posting referencing it by that name is likely a stale aggregator mirror."
+  },
+  {
+    "company": "UL Solutions",
+    "platform": "oracle",
+    "host": "fa-eups-saasfaprod1.fa.ocs.oraclecloud.com",
+    "site": "ULSolutionsCareers",
+    "notes": "Added 2026-09-30 at Clementine's request (\"UL\"). Careers hosted on Oracle Cloud HCM (fa-eups-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/ULSolutionsCareers); verified the public recruitingCEJobRequisitions REST endpoint returns the full board. Board is global (~430 reqs, many in Asia/Europe), so filter by country. If Clementine meant UL Research Institutes (the nonprofit, ul.org) instead, that is a separate employer and still needs adding."
+  },
+  {
+    "company": "Lockheed Martin",
+    "platform": "eightfold",
+    "tenant": "lockheedmartin",
+    "domain": "lockheedmartin.com",
+    "max_age_days": 30,
+    "queries": [
+      "human factors",
+      "user experience",
+      "UX researcher",
+      "research scientist",
+      "behavioral scientist",
+      "cognitive",
+      "data scientist",
+      "data visualization",
+      "perception",
+      "program manager research",
+      "technical writer",
+      "market research",
+      "social scientist"
+    ],
+    "notes": "Added 2026-09-30 at Clementine's request. lockheedmartinjobs.com now 404s; lockheedmartin.com/careers links to lockheedmartin.eightfold.ai/careers. Verified the public /api/pcsx/search endpoint. The board has thousands of engineering reqs, so check_boards.py only runs the keyword queries listed here (newest first, last max_age_days days). Many roles require US citizenship and/or a security clearance."
+  },
+  {
+    "company": "Monterey Technologies",
+    "platform": "lever",
+    "slug": "mti-inc",
+    "notes": "Added 2026-09-30 at Clementine's request (\"Monterey Tech\"). Monterey Technologies, Inc. (MTI), a human-centered systems engineering / human factors firm. Confirmed via jobs.lever.co/mti-inc. Small board (3 postings on 2026-09-30)."
+  },
+  {
+    "company": "Qualtrics",
+    "platform": "greenhouse",
+    "slug": "qualtrics",
+    "notes": "Added 2026-09-30 at Clementine's request. Confirmed via boards-api.greenhouse.io/v1/boards/qualtrics (postings link out to qualtrics.com/careers with gh_jid)."
   }
 ]
