@@ -72,5 +72,29 @@
     "platform": "greenhouse",
     "slug": "qualtrics",
     "notes": "Added 2026-09-30 at Clementine's request. Confirmed via boards-api.greenhouse.io/v1/boards/qualtrics (postings link out to qualtrics.com/careers with gh_jid)."
+  },
+  {
+    "company": "Boston Scientific",
+    "platform": "eightfold",
+    "tenant": "bostonscientific",
+    "domain": "bostonscientific.com",
+    "max_age_days": 30,
+    "queries": [
+      "human factors",
+      "usability",
+      "user research",
+      "user experience",
+      "research scientist",
+      "behavioral scientist",
+      "data scientist",
+      "data visualization",
+      "market research",
+      "customer insights",
+      "voice of the customer",
+      "program manager research",
+      "technical writer",
+      "clinical scientist"
+    ],
+    "notes": "Added 2026-09-30 at Clementine's request. bostonscientific.com/careers links to bostonscientific.eightfold.ai/careers; verified the public /api/pcsx/search endpoint. Keyword queries only (newest first, last max_age_days days), same approach as Lockheed Martin. Medical-device human factors / usability engineering roles are the most likely fits."
   }
 ]
