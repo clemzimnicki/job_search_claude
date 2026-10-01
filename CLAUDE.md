@@ -148,6 +148,13 @@ company's own ATS (API or company careers page) — not aggregator listings (Lin
 etc.) that may be stale or reposted. Cap web search at 5 results per query, filter obviously
 irrelevant snippets before fetching, then fetch each surviving candidate once.
 
+**Posting age limit**: skip any posting that is more than 14 days old (by its posted date on
+the company's own ATS) as of the run date. This applies to both board results and web-search
+finds, including companies newly added to the watchlist. Don't score or log these. If a
+posting's date isn't on the list view (e.g. ICIMS, Workday "Posted 30+ Days Ago"), check the
+detail page. If the date still can't be found, the posting may be included, but note in the
+digest that its age is unknown.
+
 **Daily/scheduled run**: 
 1. Capture today's date.
 2. Run `scripts/check_boards.py` against every company in `data/watchlist.json`.

@@ -43,7 +43,7 @@
     "platform": "eightfold",
     "tenant": "lockheedmartin",
     "domain": "lockheedmartin.com",
-    "max_age_days": 30,
+    "max_age_days": 14,
     "queries": [
       "human factors",
       "user experience",
@@ -78,7 +78,7 @@
     "platform": "eightfold",
     "tenant": "bostonscientific",
     "domain": "bostonscientific.com",
-    "max_age_days": 30,
+    "max_age_days": 14,
     "queries": [
       "human factors",
       "usability",
