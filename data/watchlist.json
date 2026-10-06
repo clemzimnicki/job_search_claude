@@ -96,5 +96,21 @@
       "clinical scientist"
     ],
     "notes": "Added 2026-09-30 at Clementine's request. bostonscientific.com/careers links to bostonscientific.eightfold.ai/careers; verified the public /api/pcsx/search endpoint. Keyword queries only (newest first, last max_age_days days), same approach as Lockheed Martin. Medical-device human factors / usability engineering roles are the most likely fits."
+  },
+  {
+    "company": "PayPal",
+    "platform": "workday",
+    "tenant": "paypal",
+    "wd_host": "wd1",
+    "site": "jobs",
+    "notes": "Added 2026-10-06 at Clementine's request. Verified the public Workday CXS endpoint at paypal.wd1.myworkdayjobs.com/jobs (300 postings on 2026-10-06, global, so filter by country). careers.pypl.com returns 403 to scripted requests, so the link from the careers page could not be read directly. PayPal also runs paypal.eightfold.ai with the same reqs (297; spot-checked R0138339 on both), so Workday was chosen because check_boards.py pulls the whole board with dates. Has an Experience Research team (Staff Experience Researcher reqs seen in NYC)."
+  },
+  {
+    "company": "Snap Inc",
+    "platform": "workday",
+    "tenant": "snapchat",
+    "wd_host": "wd1",
+    "site": "snap",
+    "notes": "Added 2026-10-06 at Clementine's request. careers.snap.com/jobs links to wd1.myworkdaysite.com/recruiting/snapchat/snap; verified the public Workday CXS endpoint at snapchat.wd1.myworkdayjobs.com/snap (201 postings on 2026-10-06, global, so filter by country)."
   }
 ]
