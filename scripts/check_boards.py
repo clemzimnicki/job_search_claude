@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Query every ATS-supported company in data/watchlist.json in one batch and print job
-postings as JSON. Supports Greenhouse, Lever, Ashby, Workday, Oracle Cloud HCM, and
-Eightfold (keyword search only -- see fetch_eightfold). Entries on other platforms
+postings as JSON. Supports Greenhouse, Lever, Ashby, Workday, Oracle Cloud HCM, SmartRecruiters,
+Eightfold (keyword search only -- see fetch_eightfold), and amazon.jobs (keyword search only --
+see fetch_amazon). Entries on other platforms
 (e.g. "icims", "unknown") are skipped and reported separately so they can be checked manually
 or via web search instead.
 
@@ -13,6 +14,7 @@ import argparse
 import datetime
 import json
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -20,6 +22,7 @@ import urllib.request
 DEFAULT_WATCHLIST = "data/watchlist.json"
 TIMEOUT = 15
 USER_AGENT = "job-hunt-system/1.0 (+https://github.com/)"
+RETRY_DELAYS = (5, 15, 30, None)
 
 
 def _get_json(url, method="GET", body=None):
@@ -29,8 +32,16 @@ def _get_json(url, method="GET", body=None):
         data = json.dumps(body).encode("utf-8")
         headers["Content-Type"] = "application/json"
     req = urllib.request.Request(url, data=data, headers=headers, method=method)
-    with urllib.request.urlopen(req, timeout=TIMEOUT) as resp:
-        return json.loads(resp.read().decode("utf-8"))
+    # Keyword-search boards (Eightfold) rate-limit bursts of queries with 429s -- back off and
+    # retry a few times before giving up on the board.
+    for delay in RETRY_DELAYS:
+        try:
+            with urllib.request.urlopen(req, timeout=TIMEOUT) as resp:
+                return json.loads(resp.read().decode("utf-8"))
+        except urllib.error.HTTPError as exc:
+            if exc.code != 429 or delay is None:
+                raise
+            time.sleep(delay)
 
 
 def _date_from_ts(ts, ms=False):
@@ -134,9 +145,15 @@ def fetch_workday(entry):
 
 def fetch_oracle(entry):
     """Oracle Cloud HCM candidate-experience sites (e.g. .../CandidateExperience/en/sites/<site>).
-    Needs "host" (the fa-*.oraclecloud.com host) and "site" (the site number) in the entry."""
+    Needs "host" (the fa-*.oraclecloud.com host) and "site" (the site number) in the entry.
+    Results come newest first, so an optional entry["max_age_days"] stops paging early on large
+    boards."""
     host = entry["host"]
     site = entry["site"]
+    cutoff = None
+    if entry.get("max_age_days"):
+        cutoff = (datetime.date.today()
+                  - datetime.timedelta(days=entry["max_age_days"])).isoformat()
     base = f"https://{host}/hcmRestApi/resources/latest/recruitingCEJobRequisitions"
     jobs = []
     offset = 0
@@ -160,6 +177,36 @@ def fetch_oracle(entry):
             })
         offset += limit
         if not reqs or offset >= item.get("TotalJobsCount", 0):
+            break
+        if cutoff and (reqs[-1].get("PostedDate") or "") < cutoff:
+            break
+    if cutoff:
+        jobs = [job for job in jobs if (job["posted"] or "") >= cutoff]
+    return jobs
+
+
+def fetch_smartrecruiters(entry):
+    base = f"https://api.smartrecruiters.com/v1/companies/{entry['slug']}/postings"
+    jobs = []
+    offset = 0
+    limit = 100
+    while True:
+        data = _get_json(f"{base}?limit={limit}&offset={offset}")
+        postings = data.get("content", [])
+        for job in postings:
+            loc = job.get("location") or {}
+            jobs.append({
+                "company": entry["company"],
+                "platform": "smartrecruiters",
+                "title": job.get("name"),
+                "url": f"https://jobs.smartrecruiters.com/{entry['slug']}/{job.get('id')}",
+                "job_id": str(job.get("id")),
+                "location": loc.get("fullLocation") or loc.get("city"),
+                "country": loc.get("country"),
+                "posted": (job.get("releasedDate") or "")[:10],
+            })
+        offset += limit
+        if not postings or offset >= data.get("totalFound", 0):
             break
     return jobs
 
@@ -200,6 +247,45 @@ def fetch_eightfold(entry):
     return list(jobs.values())
 
 
+def fetch_amazon(entry):
+    """amazon.jobs search JSON. The board is enormous, so like fetch_eightfold this runs each
+    keyword in entry["queries"] (US only, newest first) and keeps the last
+    entry["max_age_days"] days (default 30). An optional entry["team"] (e.g. "team-lab126")
+    keeps only postings from that team."""
+    cutoff = datetime.date.today() - datetime.timedelta(days=entry.get("max_age_days", 30))
+    jobs = {}
+    for query in entry.get("queries", []):
+        offset = 0
+        while True:
+            params = urllib.parse.urlencode({"base_query": query, "country": "USA",
+                                             "sort": "recent", "result_limit": 100,
+                                             "offset": offset})
+            data = _get_json(f"https://www.amazon.jobs/en/search.json?{params}")
+            postings = data.get("jobs", [])
+            stop = False
+            for job in postings:
+                posted = datetime.datetime.strptime(" ".join(job["posted_date"].split()),
+                                                    "%B %d, %Y").date()
+                if posted < cutoff:
+                    stop = True
+                    continue
+                if entry.get("team") and (job.get("team") or {}).get("label") != entry["team"]:
+                    continue
+                jobs[job["id_icims"]] = {
+                    "company": entry["company"],
+                    "platform": "amazon",
+                    "title": job.get("title"),
+                    "url": f"https://www.amazon.jobs{job.get('job_path')}",
+                    "job_id": job["id_icims"],
+                    "location": job.get("location"),
+                    "posted": posted.isoformat(),
+                }
+            offset += len(postings)
+            if stop or not postings or offset >= data.get("hits", 0):
+                break
+    return list(jobs.values())
+
+
 FETCHERS = {
     "greenhouse": fetch_greenhouse,
     "lever": fetch_lever,
@@ -207,6 +293,8 @@ FETCHERS = {
     "workday": fetch_workday,
     "oracle": fetch_oracle,
     "eightfold": fetch_eightfold,
+    "smartrecruiters": fetch_smartrecruiters,
+    "amazon": fetch_amazon,
 }
 
 

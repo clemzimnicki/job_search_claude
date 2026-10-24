@@ -35,6 +35,24 @@ scored at all:
 - Technical Writer (science- or research-adjacent)
 - Science Consultant / Expert Witness (litigation or regulatory science consulting, e.g. the
   kind of work Exponent does)
+- Sensory Scientist / Consumer Scientist / Consumer Insights Scientist (CPG, food, flavor,
+  fragrance, and personal-care product testing)
+- Measurement Scientist / Evaluation Scientist (including program evaluation at policy-research
+  firms like Mathematica, Westat, RTI, AIR, NORC, Abt)
+- Perceptual Scientist / Image Quality / Display or Color Scientist (displays, cameras, video
+  quality, color appearance and color measurement; matches her spectroradiometer calibration
+  and color-perception dissertation work)
+- Human Data Researcher / Relevance or Quality Researcher (designing human judgment tasks,
+  rater quality, and evaluation of AI systems or search/recommendation relevance)
+- Cognitive Scientist
+
+**Search title keywords**: when running the capped web search and when choosing keyword
+queries for keyword-search boards (Eightfold), use these titles: Sensory Scientist, Consumer
+Scientist, Consumer Insights Scientist, Research Scientist, Measurement Scientist, Perceptual
+Scientist, Image Quality, Vision Scientist, Display Scientist, Color Scientist, Human Data
+Researcher, Evaluation Scientist, Relevance Researcher, Quality Researcher, Human Factors,
+Cognitive Scientist, Social Scientist, Behavioral Scientist, plus the role types above.
+Do not search for "Psychometrician" (see Hard Exclusions).
 
 **Location**: Remote, hybrid, or on-site — open to relocating anywhere within the USA. Do not
 penalize for location as long as the role is US-based. Roles based outside the USA are
@@ -54,6 +72,10 @@ position. Don't disqualify a role if it is otherwise a very good fit.
 
 **Hard exclusions** (score 0, log with Notes: EXCLUDED, do not include in the daily digest):
 - Academic/postdoc positions, faculty/lecturer roles, adjunct positions
+  (Non-faculty, non-postdoc research staff roles at university research centers on the
+  watchlist, such as UW-Madison's WCER and the UW Survey Center, are not excluded: Clementine
+  asked for these centers to be tracked. Score them normally.)
+- Psychometrician roles (Clementine asked to avoid these)
 - Roles based outside the USA
 - Sandia National Laboratories internship postings — Clementine is already a year-round R&D
   intern there, so a new internship req at Sandia is not a new opportunity for her. (Full-time,
@@ -107,6 +129,10 @@ Discover a company's ATS platform from its careers page domain:
 - `jobs.lever.co` → Lever
 - `jobs.ashbyhq.com` → Ashby
 - `*.myworkdayjobs.com` → Workday
+- `jobs.smartrecruiters.com` / `smartrecruiters.com/<slug>` → SmartRecruiters
+- `*.eightfold.ai` (often behind a company domain) → Eightfold (keyword queries only)
+- `*.oraclecloud.com/hcmUI/CandidateExperience` → Oracle Cloud HCM
+- `amazon.jobs` → Amazon (keyword queries only, optional team filter)
 - Anything else (ICIMS, custom career sites, etc.) → not API-supported; fall back to a
   targeted web search for that company instead of guessing an endpoint.
 
@@ -116,6 +142,9 @@ Public JSON endpoints (no auth required):
 - Ashby: `https://api.ashbyhq.com/posting-api/job-board/<slug>`
 - Workday: `POST https://<tenant>.<wd_host>.myworkdayjobs.com/wday/cxs/<tenant>/<site>/jobs`
   (paginate 20 at a time via `offset`)
+- SmartRecruiters: `https://api.smartrecruiters.com/v1/companies/<slug>/postings`
+- Federal agencies (CDC, FEMA, NOAA/NWS) post on USAJOBS, whose API needs a registered key, so
+  check them with a targeted web search of usajobs.gov.
 
 Use `scripts/check_boards.py` to query every company in `data/watchlist.json` in one batch
 rather than fetching one at a time. When adding a new company to the watchlist, determine its

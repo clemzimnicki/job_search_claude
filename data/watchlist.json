@@ -112,5 +112,476 @@
     "wd_host": "wd1",
     "site": "snap",
     "notes": "Added 2026-10-06 at Clementine's request. careers.snap.com/jobs links to wd1.myworkdaysite.com/recruiting/snapchat/snap; verified the public Workday CXS endpoint at snapchat.wd1.myworkdayjobs.com/snap (201 postings on 2026-10-06, global, so filter by country)."
+  },
+  {
+    "company": "American Institutes for Research",
+    "platform": "greenhouse",
+    "slug": "americaninstitutesforresearch",
+    "notes": "Added 2026-10-24 at Clementine's request. Verified via boards-api.greenhouse.io (board name 'American Institutes for Research'). Note: the 'air' Greenhouse slug is a different company (Air), do not use it."
+  },
+  {
+    "company": "Samsung Research America",
+    "platform": "greenhouse",
+    "slug": "samsungresearchamerica",
+    "notes": "Added 2026-10-24 at Clementine's request. Verified via boards-api.greenhouse.io (board name 'Samsung Research America'). Global board, filter by country."
+  },
+  {
+    "company": "Pinterest",
+    "platform": "greenhouse",
+    "slug": "pinterest",
+    "notes": "Added 2026-10-24 at Clementine's request. Verified via boards-api.greenhouse.io; postings link to pinterestcareers.com with gh_jid. Global board, filter by country."
+  },
+  {
+    "company": "Scale AI",
+    "platform": "greenhouse",
+    "slug": "scaleai",
+    "notes": "Added 2026-10-24 at Clementine's request. Verified via boards-api.greenhouse.io (job-boards.greenhouse.io/scaleai). Human-data / evaluation roles are the likely fits."
+  },
+  {
+    "company": "Spotify",
+    "platform": "lever",
+    "slug": "spotify",
+    "notes": "Added 2026-10-24 at Clementine's request. Verified via api.lever.co/v0/postings/spotify. Global board, filter by country."
+  },
+  {
+    "company": "Surge AI",
+    "platform": "ashby",
+    "slug": "surge-ai",
+    "notes": "Added 2026-10-24 at Clementine's request. surgehq.ai/careers loads its listings from api.ashbyhq.com/posting-api/job-board/surge-ai (BOARD = 'surge-ai' in the page script); verified."
+  },
+  {
+    "company": "RAND",
+    "platform": "workday",
+    "tenant": "rand",
+    "wd_host": "wd5",
+    "site": "External_Career_Site",
+    "notes": "Added 2026-10-24 at Clementine's request. rand.org/jobs.html links to rand.wd5.myworkdayjobs.com/External_Career_Site; verified CXS endpoint."
+  },
+  {
+    "company": "Procter & Gamble",
+    "platform": "workday",
+    "tenant": "pg",
+    "wd_host": "wd5",
+    "site": "1000",
+    "notes": "Added 2026-10-24 at Clementine's request. pgcareers.com (Phenom front end) apply links go to pg.wd5.myworkdayjobs.com/1000; verified CXS endpoint (~850 postings, global, filter by country)."
+  },
+  {
+    "company": "Unilever",
+    "platform": "workday",
+    "tenant": "unilever",
+    "wd_host": "wd3",
+    "site": "Unilever_Experienced_Professionals",
+    "notes": "Added 2026-10-24 at Clementine's request. careers.unilever.com links to unilever.wd3.myworkdayjobs.com/Unilever_Experienced_Professionals; verified CXS endpoint. Global board, filter by country."
+  },
+  {
+    "company": "General Mills",
+    "platform": "workday",
+    "tenant": "genmills",
+    "wd_host": "wd1",
+    "site": "GMI_External_Careers",
+    "notes": "Added 2026-10-24 at Clementine's request. careers.generalmills.com links to genmills.wd1.myworkdayjobs.com/GMI_External_Careers; verified CXS endpoint. Minneapolis HQ."
+  },
+  {
+    "company": "PPG",
+    "platform": "workday",
+    "tenant": "ppg",
+    "wd_host": "wd5",
+    "site": "PPG_Careers",
+    "notes": "Added 2026-10-24 at Clementine's request. careers.ppg.com (Phenom front end) apply links go to ppg.wd5.myworkdayjobs.com/PPG_Careers; verified CXS endpoint. Global, filter by country. Color science roles likely in coatings R&D."
+  },
+  {
+    "company": "Mars",
+    "platform": "workday",
+    "tenant": "mars",
+    "wd_host": "wd3",
+    "site": "External",
+    "notes": "Added 2026-10-24 at Clementine's request. careers.mars.com (Phenom front end) apply links go to mars.wd3.myworkdayjobs.com/External; verified CXS endpoint. Global, filter by country."
+  },
+  {
+    "company": "IFF",
+    "platform": "workday",
+    "tenant": "iff",
+    "wd_host": "wd5",
+    "site": "iff_careers",
+    "notes": "Added 2026-10-24 at Clementine's request. FLAG: careers.iff.com and iff.com/careers refused scripted requests (connection refused / 403), so the link from the careers page could not be read. Endpoint found by guessing and verified: iff.wd5.myworkdayjobs.com/iff_careers returns a live flavor/fragrance board (~410 postings). Confirm in a browser that this is the board iff.com links to."
+  },
+  {
+    "company": "Kimberly-Clark",
+    "platform": "workday",
+    "tenant": "kimberlyclark",
+    "wd_host": "wd1",
+    "site": "GLOBAL",
+    "notes": "Added 2026-10-24 at Clementine's request. FLAG: careers.kimberly-clark.com returns 403 to scripted requests, so the link from the careers page could not be read. Endpoint found by guessing and verified: kimberlyclark.wd1.myworkdayjobs.com/GLOBAL returns a live K-C board (~160 postings). Confirm in a browser. Neenah, WI is a major R&D site."
+  },
+  {
+    "company": "Abt Global",
+    "platform": "oracle",
+    "host": "egpy.fa.us2.oraclecloud.com",
+    "site": "JoinAbt",
+    "max_age_days": 14,
+    "notes": "Added 2026-10-24 at Clementine's request. abtglobal.com/careers links to the Oracle HCM site JoinAbt on egpy.fa.us2.oraclecloud.com; verified. Many international project reqs, filter by country."
+  },
+  {
+    "company": "Sherwin-Williams",
+    "platform": "oracle",
+    "host": "ejhp.fa.us6.oraclecloud.com",
+    "site": "CX_2",
+    "max_age_days": 14,
+    "notes": "Added 2026-10-24 at Clementine's request. careers.sherwin-williams.com links to the Oracle HCM site CX_2 on ejhp.fa.us6.oraclecloud.com; verified (~2,300 reqs, mostly store/plant roles, so max_age_days stops paging early)."
+  },
+  {
+    "company": "Estée Lauder Companies",
+    "platform": "eightfold",
+    "tenant": "elcompanies",
+    "domain": "elcompanies.com",
+    "max_age_days": 14,
+    "queries": [
+      "sensory scientist",
+      "consumer insights",
+      "research scientist",
+      "measurement scientist",
+      "perception",
+      "image quality",
+      "vision scientist",
+      "color scientist",
+      "human data",
+      "evaluation scientist",
+      "relevance",
+      "human factors",
+      "cognitive scientist",
+      "behavioral scientist",
+      "UX researcher",
+      "data scientist"
+    ],
+    "notes": "Added 2026-10-24 at Clementine's request. careers.elcompanies.com is an Eightfold site (elcompanies.eightfold.ai); verified /api/pcsx/search."
+  },
+  {
+    "company": "Qualcomm",
+    "platform": "eightfold",
+    "tenant": "qualcomm",
+    "domain": "qualcomm.com",
+    "max_age_days": 14,
+    "queries": [
+      "sensory scientist",
+      "consumer insights",
+      "research scientist",
+      "measurement scientist",
+      "perception",
+      "image quality",
+      "vision scientist",
+      "color scientist",
+      "human data",
+      "evaluation scientist",
+      "relevance",
+      "human factors",
+      "cognitive scientist",
+      "behavioral scientist",
+      "UX researcher",
+      "data scientist"
+    ],
+    "notes": "Added 2026-10-24 at Clementine's request. careers.qualcomm.com is an Eightfold site (qualcomm.eightfold.ai); verified /api/pcsx/search. Camera/display image quality roles are the likely fits."
+  },
+  {
+    "company": "Microsoft",
+    "platform": "eightfold",
+    "tenant": "microsoft",
+    "domain": "microsoft.com",
+    "max_age_days": 14,
+    "queries": [
+      "sensory scientist",
+      "consumer insights",
+      "research scientist",
+      "measurement scientist",
+      "perception",
+      "image quality",
+      "vision scientist",
+      "color scientist",
+      "human data",
+      "evaluation scientist",
+      "relevance",
+      "human factors",
+      "cognitive scientist",
+      "behavioral scientist",
+      "UX researcher",
+      "data scientist"
+    ],
+    "notes": "Added 2026-10-24 at Clementine's request. jobs.careers.microsoft.com now redirects to apply.careers.microsoft.com, an Eightfold site; verified microsoft.eightfold.ai /api/pcsx/search. Huge board, keyword queries only."
+  },
+  {
+    "company": "Dolby",
+    "platform": "eightfold",
+    "tenant": "dolby",
+    "domain": "dolby.com",
+    "max_age_days": 14,
+    "queries": [
+      "sensory scientist",
+      "consumer insights",
+      "research scientist",
+      "measurement scientist",
+      "perception",
+      "image quality",
+      "vision scientist",
+      "color scientist",
+      "human data",
+      "evaluation scientist",
+      "relevance",
+      "human factors",
+      "cognitive scientist",
+      "behavioral scientist",
+      "UX researcher",
+      "data scientist"
+    ],
+    "notes": "Added 2026-10-24 at Clementine's request. jobs.dolby.com is an Eightfold site; verified dolby.eightfold.ai /api/pcsx/search. Color/imaging and perceptual quality research."
+  },
+  {
+    "company": "Kraft Heinz",
+    "platform": "eightfold",
+    "tenant": "kraftheinz",
+    "domain": "kraftheinz.com",
+    "max_age_days": 14,
+    "queries": [
+      "sensory scientist",
+      "consumer insights",
+      "research scientist",
+      "measurement scientist",
+      "perception",
+      "image quality",
+      "vision scientist",
+      "color scientist",
+      "human data",
+      "evaluation scientist",
+      "relevance",
+      "human factors",
+      "cognitive scientist",
+      "behavioral scientist",
+      "UX researcher",
+      "data scientist"
+    ],
+    "notes": "Added 2026-10-24 at Clementine's request. careers.kraftheinzcompany.com links to jobs.kraftheinz.com, an Eightfold site; verified kraftheinz.eightfold.ai /api/pcsx/search (R&D CX Product Insights roles seen)."
+  },
+  {
+    "company": "dsm-firmenich",
+    "platform": "eightfold",
+    "tenant": "dsm",
+    "domain": "dsm.com",
+    "max_age_days": 14,
+    "queries": [
+      "sensory scientist",
+      "consumer insights",
+      "research scientist",
+      "measurement scientist",
+      "perception",
+      "image quality",
+      "vision scientist",
+      "color scientist",
+      "human data",
+      "evaluation scientist",
+      "relevance",
+      "human factors",
+      "cognitive scientist",
+      "behavioral scientist",
+      "UX researcher",
+      "data scientist"
+    ],
+    "notes": "Added 2026-10-24 at Clementine's request. careers.dsm-firmenich.com links to jobs.dsm-firmenich.com, an Eightfold site using domain=dsm.com; verified dsm.eightfold.ai /api/pcsx/search."
+  },
+  {
+    "company": "Lawrence Livermore National Laboratory",
+    "platform": "smartrecruiters",
+    "slug": "llnl",
+    "notes": "Added 2026-10-24 at Clementine's request. llnl.gov/join-our-team/careers/find-your-job embeds SmartRecruiters (smartrecruiters.com/llnl); verified api.smartrecruiters.com/v1/companies/llnl/postings (~170 postings). Watch for postdoc reqs (hard-excluded)."
+  },
+  {
+    "company": "Amazon Lab126",
+    "platform": "amazon",
+    "team": "team-lab126",
+    "max_age_days": 14,
+    "queries": [
+      "sensory scientist",
+      "consumer insights",
+      "research scientist",
+      "measurement scientist",
+      "perception",
+      "image quality",
+      "vision scientist",
+      "color scientist",
+      "human data",
+      "evaluation scientist",
+      "relevance",
+      "human factors",
+      "cognitive scientist",
+      "behavioral scientist",
+      "UX researcher",
+      "data scientist"
+    ],
+    "notes": "Added 2026-10-24 at Clementine's request. amazon.jobs/en/teams/lab126. amazon.jobs has a public search.json endpoint (verified); check_boards.py runs keyword queries and keeps only postings whose team label is team-lab126."
+  },
+  {
+    "company": "Mathematica",
+    "platform": "cornerstone",
+    "slug": null,
+    "notes": "Added 2026-10-24 at Clementine's request. careers.mathematica-mpr.com redirects to a Cornerstone OnDemand site (mathematica.csod.com/ux/ats/careersite/4/home) with no simple public JSON API. check_boards.py does not query it automatically; check via targeted web search or the careers page."
+  },
+  {
+    "company": "Westat",
+    "platform": "brassring",
+    "slug": null,
+    "notes": "Added 2026-10-24 at Clementine's request. westat.com/careers links to an IBM/Infinite BrassRing board (sjobs.brassring.com, partnerid=82, siteid=5197); no public JSON API. check_boards.py does not query it automatically; check via targeted web search or the careers page."
+  },
+  {
+    "company": "RTI International",
+    "platform": "icims",
+    "slug": null,
+    "notes": "Added 2026-10-24 at Clementine's request. careers.rti.org (Jibe front end) is backed by iCIMS (uscareers-rtiinc.icims.com). Note: the 'rti' Greenhouse slug is Real-Time Innovations, a different company. check_boards.py does not query it automatically; check via targeted web search or the careers page."
+  },
+  {
+    "company": "NORC at the University of Chicago",
+    "platform": "custom",
+    "slug": null,
+    "notes": "Added 2026-10-24 at Clementine's request. Careers at careers.norc.org/en-us/listing/, a custom/PageUp-style site with no discovered public JSON API. check_boards.py does not query it automatically; check via targeted web search or the careers page."
+  },
+  {
+    "company": "Education Analytics",
+    "platform": "paylocity",
+    "slug": null,
+    "notes": "Added 2026-10-24 at Clementine's request. edanalytics.org/careers uses Paylocity's hosted job board; no supported API. check_boards.py does not query it automatically; check via targeted web search or the careers page."
+  },
+  {
+    "company": "UW-Madison WCER (Wisconsin Center for Education Research)",
+    "platform": "custom",
+    "slug": null,
+    "notes": "Added 2026-10-24 at Clementine's request. wcer.wisc.edu/careers; openings are posted through the UW jobs site (jobs.wisc.edu). Research staff roles are in scope, faculty/postdoc roles are still hard-excluded (see CLAUDE.md). check_boards.py does not query it automatically; check via targeted web search or the careers page."
+  },
+  {
+    "company": "UW Survey Center",
+    "platform": "custom",
+    "slug": null,
+    "notes": "Added 2026-10-24 at Clementine's request. uwsc.wisc.edu/research/employment/; openings are posted through jobs.wisc.edu. Research staff roles are in scope, faculty/postdoc roles are still hard-excluded. check_boards.py does not query it automatically; check via targeted web search or the careers page."
+  },
+  {
+    "company": "NOAA / National Weather Service (social science)",
+    "platform": "usajobs",
+    "slug": null,
+    "notes": "Added 2026-10-24 at Clementine's request. Federal roles are posted on USAJOBS, whose API requires a registered key. Search USAJOBS for NOAA/NWS social, behavioral, or physical scientist roles (e.g. series 0101, 0180, 1301). check_boards.py does not query it automatically; check via targeted web search or the careers page."
+  },
+  {
+    "company": "FEMA",
+    "platform": "usajobs",
+    "slug": null,
+    "notes": "Added 2026-10-24 at Clementine's request. Federal roles are posted on USAJOBS (API requires a key). Search for FEMA social science, risk communication, and program analyst roles. check_boards.py does not query it automatically; check via targeted web search or the careers page."
+  },
+  {
+    "company": "CDC",
+    "platform": "usajobs",
+    "slug": null,
+    "notes": "Added 2026-10-24 at Clementine's request. Federal roles are posted on USAJOBS (API requires a key). Search for CDC behavioral scientist / health scientist / health communication roles. Many CDC science roles are fellowships, check whether they count as postdoc-type (excluded). check_boards.py does not query it automatically; check via targeted web search or the careers page."
+  },
+  {
+    "company": "Verisk",
+    "platform": "unknown",
+    "slug": null,
+    "notes": "Added 2026-10-24 at Clementine's request. verisk.com/company/careers loads its job search client-side and no ATS link could be found in the page or by search. Covers catastrophe-risk modeling (formerly AIR Worldwide). Check via targeted web search. check_boards.py does not query it automatically; check via targeted web search or the careers page."
+  },
+  {
+    "company": "Moody's (including RMS)",
+    "platform": "successfactors",
+    "slug": null,
+    "notes": "Added 2026-10-24 at Clementine's request. careers.moodys.com (Radancy front end) is backed by SAP SuccessFactors (company=MoodysProd); no supported API. RMS catastrophe modeling is part of Moody's since 2021. check_boards.py does not query it automatically; check via targeted web search or the careers page."
+  },
+  {
+    "company": "Carnegie Learning",
+    "platform": "paycom",
+    "slug": null,
+    "notes": "Added 2026-10-24 at Clementine's request. carnegielearning.com/company/careers uses a Paycom hosted board; no supported API. check_boards.py does not query it automatically; check via targeted web search or the careers page."
+  },
+  {
+    "company": "McCormick",
+    "platform": "successfactors",
+    "slug": null,
+    "notes": "Added 2026-10-24 at Clementine's request. careers.mccormick.com is an SAP SuccessFactors career site; no supported API. Sensory/consumer science roles in Hunt Valley, MD. check_boards.py does not query it automatically; check via targeted web search or the careers page."
+  },
+  {
+    "company": "Givaudan",
+    "platform": "unknown",
+    "slug": null,
+    "notes": "Added 2026-10-24 at Clementine's request. careers.givaudan.com is a Phenom front end; the underlying ATS could not be confirmed (a third-party guide says SuccessFactors). Sensory and consumer science roles are the likely fits. check_boards.py does not query it automatically; check via targeted web search or the careers page."
+  },
+  {
+    "company": "L'Oréal",
+    "platform": "custom",
+    "slug": null,
+    "notes": "Added 2026-10-24 at Clementine's request. careers.loreal.com (Radancy front end) applies through careers-apply.loreal.com; no supported API. US R&I is in Clark, NJ. check_boards.py does not query it automatically; check via targeted web search or the careers page."
+  },
+  {
+    "company": "X-Rite Pantone",
+    "platform": "unknown",
+    "slug": null,
+    "notes": "Added 2026-10-24 at Clementine's request. X-Rite Pantone is a Veralto company; its jobs are listed at jobs.veralto.com/global/en/x-rite-pantone (Phenom front end over Veralto's Workday tenant veralto.wd1, which has a separate site per operating company). The X-Rite site name could not be confirmed, so check via web search or that page. check_boards.py does not query it automatically; check via targeted web search or the careers page."
+  },
+  {
+    "company": "SC Johnson",
+    "platform": "custom",
+    "slug": null,
+    "notes": "Added 2026-10-24 at Clementine's request. jobs.scjohnson.com is a Radancy/TalentBrew site (company id 5362) and the underlying ATS could not be confirmed. Racine, WI HQ. check_boards.py does not query it automatically; check via targeted web search or the careers page."
+  },
+  {
+    "company": "Kohler",
+    "platform": "unknown",
+    "slug": null,
+    "notes": "Added 2026-10-24 at Clementine's request. kohlercompany.com/careers has no ATS link in the page (careers.kohler.com has an expired SSL cert and redirects back). Check via targeted web search. check_boards.py does not query it automatically; check via targeted web search or the careers page."
+  },
+  {
+    "company": "Datacolor",
+    "platform": "ultipro",
+    "slug": null,
+    "notes": "Added 2026-10-24 at Clementine's request. datacolor.com/careers links to UKG/UltiPro (recruiting.ultipro.com/DAT1012DATAC); no supported API. check_boards.py does not query it automatically; check via targeted web search or the careers page."
+  },
+  {
+    "company": "Meta (Reality Labs)",
+    "platform": "custom",
+    "slug": null,
+    "notes": "Added 2026-10-24 at Clementine's request. metacareers.com is a custom site with no public JSON API (scripted request returned 400). Search for Reality Labs display/perception/vision science roles. check_boards.py does not query it automatically; check via targeted web search or the careers page."
+  },
+  {
+    "company": "Netflix",
+    "platform": "custom",
+    "slug": null,
+    "notes": "Added 2026-10-24 at Clementine's request. explore.jobs.netflix.net is an Eightfold site, but its /api/pcsx/search endpoint returns 403 to scripted requests, so it is not queried automatically. Search for video quality / encoding research and consumer insights roles. check_boards.py does not query it automatically; check via targeted web search or the careers page."
+  },
+  {
+    "company": "Google DeepMind",
+    "platform": "custom",
+    "slug": null,
+    "notes": "Added 2026-10-24 at Clementine's request. deepmind.google/careers links to Google's own careers site (google.com/about/careers/applications/jobs/results?company=DeepMind), which has no public JSON API. Search for human data / evaluation research roles. check_boards.py does not query it automatically; check via targeted web search or the careers page."
+  },
+  {
+    "company": "MITRE",
+    "platform": "custom",
+    "slug": null,
+    "notes": "Added 2026-10-24 at Clementine's request. careers.mitre.org (Phenom front end) links to mitre.wd5.myworkdayjobs.com/MITRE, but the Workday CXS endpoint returns 0 postings to scripted requests, so it is marked for manual checking instead of 'workday'. Re-test the CXS endpoint before switching it. check_boards.py does not query it automatically; check via targeted web search or the careers page."
+  },
+  {
+    "company": "Johns Hopkins APL",
+    "platform": "icims",
+    "slug": null,
+    "notes": "Added 2026-10-24 at Clementine's request. careers.jhuapl.edu (Jibe front end) is backed by iCIMS (careers-jhuapl.icims.com); no supported API. check_boards.py does not query it automatically; check via targeted web search or the careers page."
+  },
+  {
+    "company": "MIT Lincoln Laboratory",
+    "platform": "successfactors",
+    "slug": null,
+    "notes": "Added 2026-10-24 at Clementine's request. careers.ll.mit.edu is an SAP SuccessFactors career site; no supported API. check_boards.py does not query it automatically; check via targeted web search or the careers page."
+  },
+  {
+    "company": "Pacific Northwest National Laboratory",
+    "platform": "icims",
+    "slug": null,
+    "notes": "Added 2026-10-24 at Clementine's request. careers.pnnl.gov (Jibe front end) is backed by iCIMS (careers-pnnl.icims.com); no supported API. postdoc-pnnl.icims.com is a separate board for postdocs (excluded). check_boards.py does not query it automatically; check via targeted web search or the careers page."
+  },
+  {
+    "company": "Oak Ridge National Laboratory",
+    "platform": "successfactors",
+    "slug": null,
+    "notes": "Added 2026-10-24 at Clementine's request. jobs.ornl.gov is an SAP SuccessFactors career site; no supported API. check_boards.py does not query it automatically; check via targeted web search or the careers page."
   }
 ]
