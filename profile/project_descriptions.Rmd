@@ -12,10 +12,12 @@ date: "2026-09-12"
 #### Project 1 (2019-2020)
 - Led an online behavioral study
 - PI was Diane Beck; collaborator Emily Cunningham
-- Contributions: read relevant literature, stimulus design (Python), 
-helped program experiment using PsychoPy, helped analyze data (R), created
-visualizations (R/ggplot), wrote senior thesis, created poster for Psychonomics
-annual meeting 2020 (PowerPoint)
+- Contributions: read relevant literature, stimulus design, 
+helped program experiment using PsychoPy, helped analyze data, created
+visualizations, wrote senior thesis, created poster for Psychonomics
+annual meeting 2020 (PowerPoint), presented poster
+- Tools used: Python (PsychoPy), R (tidyverse, dplyr, ggplot), PowerPoint
+- Statistics: regression, t-tests, Bayesian analysis, data cleaning
 - Outcome: poster presented at Psychonomics annual meeting 2020, written document 
 submitted as senior thesis; this work was the basis for a second-author paper (below) 
 DOI: https://doi.org/10.1523/JNEUROSCI.0238-23.2023 
@@ -30,9 +32,12 @@ Alpha rhythmic activity is often suggested to exert an inhibitory influence on i
 - Led an online behavioral study
 - PI was Karen Schloss
 - Contributions: read relevant literature, stimulus design (Adobe Photoshop), 
-programmed experiment using JsPsych/Javascript, analyzed data (R), created
-visualizations (R/ggplot), wrote abstract, created poster for Vision Sciences 
-Society (Adobe Illustrator)
+programmed experiment using JsPsych/Javascript, analyzed data, created
+visualizations, wrote abstract, created poster for Vision Sciences 
+Society, presented poster, gave talk at a symposium
+- Tools used: JsPsych (Javascript/HTML), R (tidyverse, dplyr, ggplot), PowerPoint, 
+MATLAB (for making colormaps), Adobe Illustrator, GitHub
+- Statistics: logistic regression, t-tests, chi-squared, linear regression, mixed effects models, data cleaning
 - Outcome: abstract published in Vision Sciences Society proceedings, poster
 presented at Vision Sciences Society 2022, document submitted as first-year PhD project
 in 2021 (which was requirement for getting an M.A.)
@@ -49,7 +54,10 @@ Individuals have expectations about how visual features map to concepts in infor
 - Contributions: read relevant literature, stimulus design (Adobe Photoshop), 
 programmed experiment using JsPsych/Javascript, analyzed data (R), created
 visualizations (R/ggplot), wrote abstract, created poster for Vision Sciences 
-Society (Adobe Illustrator)
+Society (Adobe Illustrator), presented poster, gave talk at a symposium
+- Tools used: JsPsych (Javascript/HTML), R (tidyverse, dplyr, ggplot), PowerPoint, 
+MATLAB (for making colormaps), Adobe Illustrator, GitHub
+- Statistics: logistic and linear regression, t-tests, chi-squared, mixed-effects models, data cleaning
 - Outcome: abstract published in Vision Sciences Society proceedings, poster
 presented at Vision Sciences Society 2023
 - DOI: https://doi.org/10.1167/jov.23.9.5742
@@ -62,7 +70,11 @@ Spatial vision primarily depends on luminance contrast, but hue variation in spa
 - PI was Karen Schloss; collaborator Danielle Szafir
 - Contributions: read relevant literature, stimulus design (MATLAB), 
 programmed experiment using JsPsych/Javascript, analyzed data (R), created
-visualizations (R/ggplot), co-wrote paper with Karen Schloss 
+visualizations (R/ggplot), co-wrote paper with Karen Schloss, gave talk at IEEE VIS
+- Tools used: JsPsych (Javascript/HTML), R (tidyverse, dplyr, ggplot), PowerPoint, 
+MATLAB (for making colormaps), Adobe Illustrator, GitHub
+- Statistics: logistic and linear regression, t-tests, mixed-effects models, 
+hierarchical clustering, data cleaning
 - Outcome: paper published in IEEE VIS proceedings 2023, talk presented to 
 audience of engineers/psychologists/computer scientists/etc at IEEE VIS 2023 
 annual meeting
@@ -77,8 +89,14 @@ To create effective data visualizations, it helps to represent data using visual
 - PI was Timothy T. Rogers
 - Contributions: read relevant literature, stimulus design (Adobe Photoshop), 
 programmed experiment using JsPsych/Javascript, analyzed data (R), created
-visualizations (R/ggplot), wrote abstract, created poster for Vision Sciences 
-Society (Adobe Illustrator)
+visualizations (R/ggplot), wrote abstract, created poster for Cognitive Sciences Society
+(Adobe Illustrator), gave talk at CogSci annual meeting 2025
+- Tools used: JsPsych (Javascript/HTML), GitHub, R (tidyverse, dplyr, ggplot, plotly, base R), 
+PowerPoint, MATLAB (for color conversion), Python (for running embedding code, Salmon), 
+Adobe Illustrator
+- Statistics: linear regression, t-tests, mixed-effects models, hierarchical clustering, 
+silhouette statistics, Procrustes analysis, data cleaning
+- Same tools/stats for projects 5-9
 - Outcome: abstract published in Cognitive Sciences Society proceedings, poster
 presented at Cognitive Sciences Society 2025 annual meeting
 
@@ -93,6 +111,13 @@ While individual differences have been found in many aspects of color perception
 programmed experiment using JsPsych/Javascript, analyzed data (R), created
 visualizations (R/ggplot), wrote results in dissertation proposal, currently
 writing results in dissertation proper
+- Tools used: JsPsych (Javascript/HTML), GitHub, R (tidyverse, dplyr, ggplot, plotly, base R), 
+PowerPoint, MATLAB (for color conversion), Python (for running embedding model, Salmon; 
+and for making stimulus PNGs), Adobe Illustrator, spectroradiometer, DataPipe/OSF 
+(data collection and storage)
+- Statistics: data cleaning, linear regression, logistic regression, t-tests, 
+mixed-effects models, hierarchical clustering, silhouette statistics, dip test 
+for unimodality, classical multidimensional scaling, Procrustes analysis, correlation
 - Outcome: abstract published in Cognitive Sciences Society proceedings, will
 be part of dissertation work
 
@@ -158,7 +183,7 @@ Results: people did not cluster, but there were individual differences.
 - PI is Timothy T. Rogers
 - Contributions: read relevant literature, stimulus design (MATLAB), 
 programmed experiment using JsPsych/Javascript (supported by ClaudeCode), 
-calibrated monitors using photoradiometer, analyzing data (R), creating 
+calibrated monitors using spectroradiometer, analyzing data (R), creating 
 visualizations (R/ggplot), writing results in dissertation
 - Outcome: will be part of dissertation work
 
@@ -195,7 +220,7 @@ put into the same category in the category task.
 - PI is Timothy T. Rogers
 - Contributions: read relevant literature, stimulus design (MATLAB), 
 programmed experiment using JsPsych/Javascript (supported by ClaudeCode), 
-calibrated monitors using photoradiometer, analyzing data (R), creating 
+calibrated monitors using spectroradiometer, analyzing data (R), creating 
 visualizations (R/ggplot), writing results in dissertation
 - Outcome: will be part of dissertation work
 
@@ -223,11 +248,11 @@ embeddings will predict a participant's similarity judgments on held-out items
 significantly better than will (a) embeddings from other participants, suggesting
 reliable individual differences in perceived color similarity, and (b) color 
 coordinates in a standardized perceptual color space (CIELAB). I expect also to
-find clusters. If respresentational motifs represent ability, then participants 
+find clusters. If representational motifs represent ability, then participants 
 in the hue cluster should be faster at classifying colors based on hue while 
 ignoring irrelevant lightness variation, and participants in the lightness cluster 
 should be faster at classifying colors based on lightness while ignoring irrelevant 
-hue variation. If representationalmotifs reflect strategy, however, then all 
+hue variation. If representational motifs reflect strategy, however, then all 
 participants should be similarly affected by interference.
 
 ## Sandia National Laboratories (ongoing position)
@@ -237,7 +262,12 @@ participants should be similarly affected by interference.
 - Led an online behavioral study (MTurk)
 - PI was Laura Matzen
 - Contributions: read relevant literature, stimulus design (Python, MATLAB)
-analyzed data (R), created visualizations (R/ggplot), co-wrote paper
+analyzed data (R), refactored HTML/Python code into jsPsych, created visualizations 
+(R/ggplot), co-wrote paper
+- Tools used: JsPsych (Javascript/HTML), Mechanical Turk, R (tidyverse, dplyr, ggplot, 
+plotly, base R), PowerPoint, MATLAB (for color conversion), Python (for making 
+stimulus PNGs), GIMP
+- Statistics: data cleaning, ANOVA, linear regression, t-tests (corrected)
 - Outcome: paper published in IEEE VIS
 - DOI: 10.1109/TVCG.2026.3713087
 
@@ -251,6 +281,7 @@ People struggle to reason about uncertainty, yet they must make decisions based 
 interviews, manage all interview scheduling, lead data analyses (Excel/LLM-assisted), 
 track deliverables/teammate tasks, manage file organization, lead PowerPoint
 presentation design, co-present results to engineering depts with supervisor
+- Tools used: Checkbox (survey), PowerPoint, Excel, Word
 
 Description: 
 Was asked to help design interviews and surveys for a project aiming to better
@@ -261,6 +292,7 @@ and what general pain points are, as well as recommending solutions.
 #### Project 12-13 (2025; 2026)
 - 2025: Helped run & analyze a survey to assess an apprenticeship program
 - 2026: Led the effort to run and analyze the survey for 2026 cycle
+- Tools used: Checkbox (survey), PowerPoint, R, Excel, Word
 
 Description: 
 Was asked to help design survey and analyze results for a project aiming to 

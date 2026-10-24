@@ -1,0 +1,69 @@
+---
+title: "other experience"
+output: html_document
+date: "2026-09-12"
+---
+
+#List of experience outside of "projects"
+
+# UW-Madison Psychology Department Colloquium Committee (2022-2025)
+The committee was a group of graduate students who invited and organized 4 invited 
+lectures annually. 
+
+### As committee chair (2024-2025)
+- Lead committee in inviting national lecturers, tracking teammate tasks and 
+deadlines as they organized all aspects of event planning: hotels, flights, 
+meals, meetings, event catering, advertising, and the lecture itself 
+- Communicated with psychology department chair and secretary on event logistics
+(e.g. budget)
+- Tracked other board members' tasks and deadlines (donor relations, advertising, 
+and treasurer)
+- Led committee meetings to track teammate tasks, decide on future invited speakers,
+update committee on meetings with department chair/secretary/etc
+- Conducted and analyzed annual survey to collect department feedback on lecture 
+series (Qualtrics)
+- Presented annually to incoming graduate students, advertising the committee to 
+acquire new members
+    
+### As head of donor relations (2023)
+- Applied for and received $2000+ yearly to fund invited lectures (application
+included reasoning for invite, plus support letters from 3 other departments or 
+organizations)
+- Communicated with donors who gave $10000 per year to help fund committee: 
+wrote newsletters/summaries, sent updates
+- Communicated with chair on award money updates
+
+
+# VisXVision (2022-2025)
+- Collaborate with engineers across institutions to design and lead annual 
+international workshops connecting researchers across vision science, design, 
+and data visualization, facilitating cross-functional collaboration
+- Manage all logistics of event planning, including budget, speaker coordination, 
+event advertising, day-of event execution
+
+
+# Teaching (2021-2026)
+# Was a teaching assistant for 10 classes across 9 semesters
+- Classes assisted: introduction to psychology, research methods (3 times), 
+animal cognition (twice), child development, adolescent development, perception 
+and sensation, adult psychopathology
+- Held office hours and review sessions to answer student questions and mentor 
+students in learning new material
+- Learned new material outside of own expertise and was ready to teach it within days
+- For research methods: led labs twice a week on survey, observational, and experimental 
+methods, statistics/Excel, writing, and presentations; met with students 1:1 to give
+feedback on progress; gave individual feedback on essays and presentations (3x per 
+semester, 40 students each time)
+- TAd for multiple classes per semester, balancing competing priorities and deadlines
+while conducting research
+- Organized, helped write, and graded exams 
+- Communicated with leading instructor on student progress and own deadlines/tasks
+ 
+# Mentored undergraduate research assistants in programming
+- Taught undergraduate research assistants to use jsPsych to make behavioral experiments
+- Organized teaching materials and schedule, taught lessons, and gave feedback
+
+
+
+
+
