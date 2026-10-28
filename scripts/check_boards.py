@@ -50,6 +50,25 @@ def _date_from_ts(ts, ms=False):
     return datetime.date.fromtimestamp(ts / 1000 if ms else ts).isoformat()
 
 
+def _date_from_workday(posted_on):
+    """Workday's CXS list only gives relative text ("Posted Today", "Posted 4 Days Ago",
+    "Posted 30+ Days Ago"). Convert it to an ISO date so it compares like the other
+    platforms. "30+" becomes today minus 30 days -- the newest the posting could be -- so
+    it always falls outside a 14-day window instead of slipping through as text."""
+    if not posted_on:
+        return ""
+    today = datetime.date.today()
+    text = posted_on.lower()
+    if "today" in text:
+        return today.isoformat()
+    if "yesterday" in text:
+        return (today - datetime.timedelta(days=1)).isoformat()
+    digits = "".join(ch for ch in text if ch.isdigit())
+    if digits:
+        return (today - datetime.timedelta(days=int(digits))).isoformat()
+    return ""
+
+
 def fetch_greenhouse(entry):
     url = f"https://boards-api.greenhouse.io/v1/boards/{entry['slug']}/jobs?content=true"
     data = _get_json(url)
@@ -135,7 +154,8 @@ def fetch_workday(entry):
                 "url": f"https://{tenant}.{wd_host}.myworkdayjobs.com/{site}{path}",
                 "job_id": job.get("bulletFields", [None])[0] or path,
                 "location": job.get("locationsText"),
-                "posted": job.get("postedOn"),
+                "posted": _date_from_workday(job.get("postedOn")),
+                "posted_text": job.get("postedOn"),
             })
         offset += limit
         if offset >= total or len(postings) < limit:
@@ -228,7 +248,12 @@ def fetch_eightfold(entry):
             data = _get_json(f"https://{tenant}.eightfold.ai/api/pcsx/search?{params}")["data"]
             positions = data.get("positions", [])
             for job in positions:
-                if job.get("postedTs", 0) < cutoff:
+                # postedTs is bumped whenever a req is refreshed or reposted, so a months-old
+                # req can look brand new (seen 2026-10-27 with a Microsoft req created in
+                # August). creationTs is the original posting date -- use the earlier one.
+                first_ts = min(ts for ts in (job.get("creationTs"), job.get("postedTs")) if ts) \
+                    if (job.get("creationTs") or job.get("postedTs")) else 0
+                if first_ts < cutoff:
                     continue
                 jobs[job["id"]] = {
                     "company": entry["company"],
@@ -237,7 +262,8 @@ def fetch_eightfold(entry):
                     "url": f"https://{tenant}.eightfold.ai{job.get('positionUrl')}",
                     "job_id": str(job.get("displayJobId") or job["id"]),
                     "location": "; ".join(job.get("locations") or []),
-                    "posted": _date_from_ts(job.get("postedTs")),
+                    "posted": _date_from_ts(first_ts),
+                    "refreshed": _date_from_ts(job.get("postedTs")),
                     "pay_range": "; ".join(job.get("efcustomTextCustpayrange") or []),
                 }
             start += len(positions)
