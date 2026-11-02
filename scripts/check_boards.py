@@ -345,7 +345,7 @@ def main():
             continue
         try:
             all_jobs.extend(fetcher(entry))
-        except (urllib.error.URLError, urllib.error.HTTPError, KeyError, ValueError) as exc:
+        except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, KeyError, ValueError) as exc:
             errors.append({"company": entry.get("company"), "platform": platform,
                             "error": str(exc)})
 
